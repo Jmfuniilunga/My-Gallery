@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Rocks Gallery</title>
+        <link rel="stylesheet" href="css/styles.css">
+       
+    </head>
+    <body>
+        <div class="wrapper">
+        <div style="text-align:center">
+            <h2 class="title">Congo Rocks</h2>
+            <p class="title-text">Click on the pictures below for more details:</p>
+          </div>
+          
+          <div class="row">
+            <div class="column">
+              <img src="img/cobalt.jpg" alt="Cobalt Calcite mineral from Congo. Cobalto calcite has the qualities of calcite along with the qualities of cobalt, which creates the pink color. Carbonate mineral with trigonal crystal system." style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="img/bornite.jpg" alt="Piece of Bornite, also known as peacock ore from Congo. An sulfide mineral that crystallizes in the orthorhombic system (pseudo-cubic) with various iridescent shades of blue to purple." style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="img/malachite.jpg" alt="Malachite specimen from Congo, Africa." style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+              <img src="img/Cuprosklodowskite.jpg" alt="Piece of Cuprosklodowskite mineral from Katanga, Congo. Cluster of fine sharp green crystals. Cuprosklodowskite is nesosilicate mineral and secondary uranium mineral." style="width:100%" onclick="myFunction(this);">
+            </div>
+          </div>
+          
+          <div class="container" id="the-container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img src="#" id="expandedPicture" style="width:100%" alt="#">
+            
+            <div id="imagetext"></div>
+          </div>
+          
+          <script>
+          function myFunction(imgs) {
+            var expandPic = document.getElementById("expandedPicture");
+            var imageText = document.getElementById("imagetext");
+            
+            document.getElementById("expandedPicture").style.height="auto";
+            expandPic.src = imgs.src;
+            imageText.innerHTML = imgs.alt;
+            expandPic.parentElement.style.display = "block";
+          }
+          </script>
+          </div>
+    </body>
+    
+</html>
