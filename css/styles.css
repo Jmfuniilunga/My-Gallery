@@ -69,6 +69,14 @@ box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   .container {
     position: relative;
     display: none;
+    overflow: hidden;
+    
+   
+  }
+  .container img:hover{
+    transform: scale(1.15);
+    transition: transform 500ms ease-in-out;
+    transition-duration: 3s, 5s;
   }
   
   /* Expanding image text */
